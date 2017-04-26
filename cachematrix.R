@@ -11,11 +11,11 @@ makeCacheMatrix <- function(x = matrix()) {
     m <<- NULL
   }
   get <- function() x
-  setmean <- function(mean) m <<- mean
-  getmean <- function() m
+  setsol <- function(solve) m <<- mean
+  getsol <- function() m
   s <- list(set = set, get = get,
-            setmean = setmean,
-            getmean = getmean)
+            setsol = setsol,
+            getsol = getsol)
   do.call(rbind,s)
 }
 
